@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>form</title>
+</head>
+
+<body>
+  <!--Main Navigation-->
+  <style>
+    /* Carousel styling */
+    #introCarousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100vh;
+    }
+
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #introCarousel {
+        margin-top: -58.59px;
+      }
+
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 30vh;
+      }
+    }
+
+    .navbar .nav-link {
+      color: black !important;
+    }
+
+    a {
+      color: white;
+    }
+  </style>
+  <!-- Navbar111111111111111111111 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="border-bottom: 2px solid black; margin-bottom: 55px;">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" href="">
+        <img src="{{ url_for('static', filename='images/GLAZ LOGO.jpg') }}" height="50" alt="GLAZ Logo" loading="lazy" style="margin-top: -1px;" />
+      </a>
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/ ">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="/users/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/about_us" rel="nofollow" target="_blank">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/contact_us" target="_blank">Contact Us</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+        <div class="d-flex align-items-center">
+          <a href="/logout" class="btn btn-primary me-3">Log Out</a>
+        </div>
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <header>
+    <!-- Navbar1111111 -->
+    <!-- Navbar -->
+    
+    <!-- Navbar -->
+
+    <!-- Carousel wrapper -->
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+      <!-- Inner -->
+      <div class="carousel-inner">
+
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="mask">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-black text-center">
+                <br>
+                <h1 class="mb-3">Welcome in <span>{{logged_admin.email}}  {{logged_admin.id}}</span></h1>
+                <h5 class="mb-4">With our website, your life gets easier</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+
+      <!-- Controls -->
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+  
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <hr class="my-5" />
+      <!--Section: Content-->
+      <section class="text-center">
+        <h4 class="mb-5"><strong>Our Services</strong></h4>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{{ url_for('static', filename='images/cleaning.jpg') }}" class="img-fluid" style="height: 200px;" />
+                <a href="/services/employees/2">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Cleaning Houses</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="/services/employees/2" class="btn btn-primary">Discover Profiles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{{ url_for('static', filename='images/babiesSiter.jfif') }}" class="img-fluid"  style="height: 200px;"/>
+                <a href="/services/employees/1">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Babysitting</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="/services/employees/1" class="btn btn-primary">Discover Profiles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{{ url_for('static', filename='images/home-services.jpg') }}" class="img-fluid"  style="height: 200px;"/>
+                <a href="/services/employees">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Combo</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the
+                  card's content.
+                </p>
+                <a href="/services/employees" class="btn btn-primary">Discover Profiles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{{ url_for('static', filename='images/users.avif') }}"  class="img-fluid" style="height: 200px;"/>
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Customers</h5>
+                <p class="card-text">
+                    the customer is king.
+                </p>
+                <a href="/users/shows" class="btn btn-primary">Show</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="{{ url_for('static', filename='images/add.jfif') }}"  class="img-fluid" style="height: 200px;"/>
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Add New Employees</h5>
+                <p class="card-text">
+                  Add New Employees.
+                </p>
+                <a href="/add/employee" class="btn btn-primary">Add</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <!--Section: Content-->
+
+      <hr class="my-5" />
+      <!--Section: Content-->
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted" style="padding-top: 10px;">
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: brown;">
+              <i class="fas fa-gem me-3 text-secondary"></i>GLAZ
+            </h6>
+            <p>
+              Glaz is a company that offers you services 
+              of cleaning and babysitting.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: brown;">
+              Services
+            </h6>
+            <p>
+              <a href="/services/employees/1" class="text-reset">Babysitting</a>
+            </p>
+            <p>
+              <a href="/services/employees/2" class="text-reset">Cleaning Houses</a>
+            </p>
+            <p>
+              <a href="/services/employees" class="text-reset">Combo</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: brown;">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: brown;">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> Tunis, Tunisia</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 216 50 259 892</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i> + 216 22 436 723</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  </footer>
+  <!-- Footer -->
+</body>
+
+</html>

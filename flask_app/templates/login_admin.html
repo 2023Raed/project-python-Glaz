@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>form</title>
+</head>
+
+<body>
+  <!--Main Navigation-->
+  <style>
+    form {
+      border: 2px solid  rgb(186,202,217);
+      box-shadow: 1px 1px 1px;
+    }
+    button{
+        border: 2px solid rgb(186,202,217);
+        background-color: rgb(186,202,217);
+      }
+    /* Carousel styling */
+    #introCarousel,
+    .carousel-inner,
+    .carousel-item,
+    .carousel-item.active {
+      height: 100vh;
+    }
+
+
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #introCarousel {
+        margin-top: -58.59px;
+      }
+
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 50vh;
+      }
+    }
+
+    .navbar .nav-link {
+      color: black !important;
+    }
+
+    a {
+      color: white;
+    }
+  </style>
+  <!-- Navbar111111111111111111111 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="border-bottom: 2px solid black; margin-bottom: 55px;">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" href="">
+        <img src="{{ url_for('static', filename='images/GLAZ LOGO.jpg') }}" height="50" alt="GLAZ Logo" loading="lazy" style="margin-top: -1px;" />
+      </a>
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/ ">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="/users/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/about_us" rel="nofollow" target="_blank">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/contact_us" target="_blank">Contact Us</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+        <div class="d-flex align-items-center">
+          <a href="/users/register" class="btn btn-primary me-3">Log In</a>
+        </div>
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <header>
+    <!-- Navbar1111111 -->
+    <!-- Navbar -->
+    
+    <!-- Navbar -->
+
+    <!-- Carousel wrapper -->
+    <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+      <!-- Inner -->
+      <div class="carousel-inner">
+
+        <!-- Single item -->
+        <div class="carousel-item active">
+          <div class="mask">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="text-white text-center">
+                <h1 class="mb-3">Welcome in</h1>
+                <h5 class="mb-4">With our website, your life gets easier</h5>
+                <a class="btn btn-info btn-lg m-2" href="/admins/login" > Admin </a>
+                <a class="btn btn-info btn-lg m-2" href="/users/register" >Customer</a>
+                <a class="btn btn-info btn-lg m-2" href="/employees/login" >Employee</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <video style="min-width: 100%; min-height: 100%;" playsinline autoplay muted loop>
+          <source class="h-100" src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <!-- Inner -->
+
+      <!-- Controls -->
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+  <!--Main Navigation-->
+  <!--Main Navigation-->
+  <!--Main layout-->
+  <main class="mt-5">
+    <div class="container">
+      <!--Section: Content-->
+      <hr class="my-5" />
+      <!--Section: Content-->
+      <section class="text-center">
+        <div class="mask d-flex align-items-center h-100" style="background-color: rgb(238,239,239)">
+          <div class="container">
+            <div class="row justify-content-center">
+
+              <div class="col-xl-5 col-md-8">
+
+                <form action="/admin/dashboard" method="post" class="bg-white  rounded-5 shadow-5-strong p-5  ">
+                  <h2>Login</h2>
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form1Example1">Email address</label>
+                    <input type="text" id="form1Example1" class="form-control" name="email" />
+                  </div>
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form1Example2">Password</label>
+                    <input type="password" id="form1Example2" class="form-control" name="password" />
+                  </div>
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                </form>
+          
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Section: Content-->
+
+      <hr class="my-5" />
+      <!--Section: Content-->
+    </div>
+  </main>
+<!--Main layout-->
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-light text-muted" style="padding-top: 10px;">
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: brown;">
+              <i class="fas fa-gem me-3 text-secondary"></i>GLAZ
+            </h6>
+            <p>
+              Glaz is a company that offers you services 
+              of cleaning and babysitting.
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: brown;">
+              Services
+            </h6>
+            <p>
+              <a href="/services/employees" class="text-reset">Babysitting</a>
+            </p>
+            <p>
+              <a href="/services/employees" class="text-reset">Cleaning Houses</a>
+            </p>
+            <p>
+              <a href="/services/employees" class="text-reset">Combo</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: brown;">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: brown;">Contact</h6>
+            <p><i class="fas fa-home me-3 text-secondary"></i> Tunis, Tunisia</p>
+            <p>
+              <i class="fas fa-envelope me-3 text-secondary"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3 text-secondary"></i> + 216 50 259 892</p>
+            <p><i class="fas fa-print me-3 text-secondary"></i> + 216 22 436 723</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  </footer>
+  <!-- Footer -->
+</body>
+
+</html>
